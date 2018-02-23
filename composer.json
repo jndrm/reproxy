@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "5.5.*",
+        "laravel/framework": ">=5.5.0",
         "react/event-loop": "^0.4.3",
         "react/socket": "^1.0 || ^0.8.3"
     },

@@ -20,6 +20,11 @@ $ php artisan vendor:publish --provider="Drmer\Reproxy\ReproxyServiceProvider"
 ```
 
 ## Usage
+add your proxy map to ```config/reproxy.php``` file
+```php
+'tcp://[::]:443' => 'tcp://8.8.8.8:443',
+```
+
 ```sh
 $ sudo php artisan reproxy
 ```

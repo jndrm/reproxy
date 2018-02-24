@@ -49,7 +49,4 @@ add your proxy map to ```config/reproxy.php``` file
 $ sudo php artisan reproxy
 ```
 ## Todo
-- [ ] Add global composer command
 - [ ] Add tests
-- [ ] Add Lumen support
-- [ ] Add Laravel 4 Support

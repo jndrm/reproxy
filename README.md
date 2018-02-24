@@ -1,9 +1,8 @@
 # Reproxy
-
-PHP reverse proxy, map your IPv6 address to an IPv4 address or domain. Support both HTTP and HTTPS
+PHP reverse proxy is a tool that can map your IPv6 address to an IPv4 address or domain. Support both HTTP and HTTPS
 
 ## Usage
-### normal use
+### Normal use
 ```sh
 $ git clone https://github.com/jndrm/reproxy.git && cd reproxy
 $ composer install
@@ -15,21 +14,22 @@ $ sudo php start.php
 or use it in your own project
 ```php
 <?php
-    use Drmer\Reproxy\ReproxyServer;
 
-    $server = new ReproxyServer([
-        // map your localhost to github server
-        'tcp://127.0.0.1:443' => 'tcp://13.250.177.223:443',
-    ]);
+use Drmer\Reproxy\ReproxyServer;
 
-    echo "Reverse proxy server starting\n";
+$server = new ReproxyServer([
+    // map your localhost to github server
+    'tcp://127.0.0.1:443' => 'tcp://13.250.177.223:443',
+]);
 
-    $server->start();
-    // nothing will be executed after start
+echo "Reverse proxy server starting\n";
+
+$server->start();
+// nothing will be executed after start
 ```
 
 ### Laravel
-add reproxy to your project
+Add reproxy to your project
 ```sh
 $ composer require drmer/reproxy
 ```
@@ -43,7 +43,7 @@ $ php artisan vendor:publish --provider="Drmer\Reproxy\ReproxyServiceProvider"
 ```
 add your proxy map to ```config/reproxy.php``` file
 ```php
-'tcp://[::]:443' => 'tcp://8.8.8.8:443',
+'tcp://127.0.0.1:443' => 'tcp://13.250.177.223:443',
 ```
 ```sh
 $ sudo php artisan reproxy

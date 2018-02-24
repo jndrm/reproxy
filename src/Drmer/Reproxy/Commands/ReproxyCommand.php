@@ -48,7 +48,5 @@ class ReproxyCommand extends Command
         $this->comment("IPv6 reverse proxy starting...");
 
         with(new ReproxyServer($proxies))->start();
-
-        $this->loop->run();
     }
 }

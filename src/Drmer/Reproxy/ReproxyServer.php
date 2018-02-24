@@ -41,6 +41,6 @@ class ReproxyServer
             $conn->close();
             return;
         }
-        with(new TcpClient($this->loop, $conn))->start($uri);
+        (new TcpClient($this->loop, $conn))->start($uri);
     }
 }
